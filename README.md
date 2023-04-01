@@ -4,7 +4,7 @@ A Simple Doubt Submission Software made using flask.
 A Simple Doubt Submmission application that notifies me, that someone has posted a doubt via 'notify-send' commans in Linux.
 Note: This feature might break the app on several systems so please remove the 'notify_send' function and its calls if this dependency can't be fulfilled.
 
-[https://github.com/vaskovsky/notify-send](Click here to install the Dependency on Windows)
+[https://github.com/vaskovsky/notify-send] Click here to install the Dependency on Windows
 For Mac OS:
 Please the Subprocess command should be this 
 ```bash
