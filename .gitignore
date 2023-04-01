@@ -128,8 +128,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-=======
 env
 __pycache__
 instance
->>>>>>> 013d159 (Frist Commit, In working Condition. I forgot to initialize the)
