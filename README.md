@@ -5,16 +5,8 @@ A Simple Doubt Submmission application that notifies me, that someone has posted
 Note: This feature might break the app on several systems so please remove the 'notify_send' function and its calls if this dependency can't be fulfilled.
 
 [https://github.com/vaskovsky/notify-send] Click here to install the Dependency on Windows
-For Mac OS:
-Please the Subprocess command should be this 
-```bash
-osascript -e 'display notification "hello world!"'
-```
 
-So the line 41 after change will be something like this :
-```python
-p = subprocess.Popen(['osascript', '-e', '\'display', 'notification', f'"{title}', f'{message}"\''])
-```
+For Mac OS just read this [https://gist.github.com/blech75/fd6c36c43057607507e2]
 
 ## Setup
 Clone this Repo then open a Terminal in that Path and run these commands.
