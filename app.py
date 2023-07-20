@@ -1,4 +1,11 @@
-from flask import Flask, render_template, request, redirect, url_for, jsonify
+from flask import (
+    Flask, 
+    render_template, 
+    request, 
+    redirect, 
+    url_for, 
+    jsonify
+)
 from flask_sqlalchemy import SQLAlchemy
 import subprocess
 import uuid
@@ -15,6 +22,7 @@ class Doubt(db.Model):
 
     def __repr__(self):
         return f"<Doubt {self.id}>"
+
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -40,20 +48,6 @@ def index():
 def notify_send(message, title="New Doubt"):
     p = subprocess.Popen(['notify-send', title, message])
     return True, p
-
-@app.route('/api/doubts', methods=['GET'])
-def get_all_doubts():
-    doubts = Doubt.query.all()
-    result = []
-    for doubt in doubts:
-        doubt_data = {
-            'id': doubt.id,
-            'name': doubt.name,
-            'email': doubt.email,
-            'doubt': doubt.doubt
-        }
-        result.append(doubt_data)
-    return jsonify(result)
 
 if __name__ == '__main__':
     with app.app_context():db.create_all()
